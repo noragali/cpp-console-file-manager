@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1783172035 source:c:\users\norag\onedrive\dators\projects\console file manager cpp\console-file-manager\filemanager.cpp
+
+1783179934 source:c:\users\norag\onedrive\dators\projects\console file manager cpp\console-file-manager\main.cpp
+	<iostream>
+	"Menu.h"
+
+1783179657 c:\users\norag\onedrive\dators\projects\console file manager cpp\console-file-manager\menu.h
+
