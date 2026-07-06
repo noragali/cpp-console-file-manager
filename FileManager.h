@@ -1,8 +1,14 @@
+#include <filesystem>
+
 class FileManager{
+private:
+    std::filesystem::path currentPath;
 public:
-    void currentDictionary();
+    FileManager();
+    void currentDirectory();
     void listFiles();
     void createFile();
     void deleteFile();
     void renameFile();
+    void changeDirectory();
 };

@@ -10,22 +10,22 @@ void Menu::showMenu(){
     cout<<"3. Create file" <<endl;
     cout<<"4. Delete file" <<endl;
     cout<<"5. Rename file" <<endl;
-    cout<<"6. Exit" <<endl;
+    cout<<"6. Change directory" << endl;
+    cout<<"7. Exit" <<endl;
     cout<<"Choice: ";
 }
 
 void Menu::run() {
     int choice = 0;
+    FileManager fileManager;
 
-    while(choice != 6) {
+    while(choice != 7) {
         showMenu();
         cin >> choice;
 
-        FileManager fileManager;
-
         switch(choice) {
             case 1:
-                fileManager.currentDictionary();
+                fileManager.currentDirectory();
                 break;
             case 2:
                 fileManager.listFiles();
@@ -40,6 +40,9 @@ void Menu::run() {
                 fileManager.renameFile();
                 break;
             case 6:
+                fileManager.changeDirectory();
+                break;
+            case 7:
                 cout<<"Exiting..";
                 break;
             default:
