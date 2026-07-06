@@ -33,6 +33,9 @@ void Menu::run() {
             case 3:
                 fileManager.createFile();
                 break;
+            case 4:
+                fileManager.deleteFile();
+                break;
             case 6:
                 cout<<"Exiting..";
                 break;

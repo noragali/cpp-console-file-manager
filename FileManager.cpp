@@ -38,5 +38,11 @@ void FileManager::createFile() {
 }
 
 void FileManager::deleteFile() {
+    string name;
+    cout << "Write the file name that you want to delete: ";
+    cin >> name;
 
+    bool deleted = fs::remove(name);
+    if(deleted) cout<<"File is deleted!";
+    else cout <<"File with the name doesn't exist!";
 }
