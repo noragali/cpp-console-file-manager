@@ -43,6 +43,23 @@ void FileManager::deleteFile() {
     cin >> name;
 
     bool deleted = fs::remove(name);
-    if(deleted) cout<<"File is deleted!";
-    else cout <<"File with the name doesn't exist!";
+    if(deleted) cout<<"File is deleted!" << endl;
+    else cout <<"File with the name doesn't exist!" << endl;
+}
+
+void FileManager::renameFile() {
+    string oldName;
+    string newName;
+    cout<<"Enter the current name: ";
+    cin >> oldName;
+    cout<< "Enter the new name: ";
+    cin >> newName;
+
+    if(fs::exists(oldName)) {
+        fs::rename(oldName, newName);
+        cout << "File renamed!" << endl;
+    } else {
+        cout<< "File with the name wasn't found!" << endl;
+    }
+
 }

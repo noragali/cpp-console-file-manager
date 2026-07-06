@@ -36,6 +36,9 @@ void Menu::run() {
             case 4:
                 fileManager.deleteFile();
                 break;
+            case 5:
+                fileManager.renameFile();
+                break;
             case 6:
                 cout<<"Exiting..";
                 break;
