@@ -4,7 +4,9 @@
 using namespace std;
 
 void Menu::showMenu(){
-    cout<<"-- Console file manager -- " <<endl;
+    cout<<"============================"<<endl;
+    cout<<"    Console file manager    " <<endl;
+    cout<<"============================"<<endl;
     cout<<"1. Show current directory" <<endl;
     cout<<"2. List files" <<endl;
     cout<<"3. Create file" <<endl;
@@ -14,6 +16,7 @@ void Menu::showMenu(){
     cout<<"7. Change directory" << endl;
     cout<<"8. Go back" << endl;
     cout<<"9. Exit" <<endl;
+    cout<<endl;
     cout<<"Choice: ";
 }
 
