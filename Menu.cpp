@@ -23,7 +23,18 @@ void Menu::run() {
 
     while(choice != 9) {
         showMenu();
-        cin >> choice;
+
+        if(!(cin>>choice)) {
+            cout << "Invalid input!" << endl;
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            continue;
+        }
+
+        if(choice > 9 || choice < 1) {
+            cout << "Input has to be from 1 - 9!" << endl;
+            continue;
+        }
 
         switch(choice) {
             case 1:
@@ -49,6 +60,7 @@ void Menu::run() {
                 break;
             case 8:
                 fileManager.goBack();
+                break;
             case 9:
                 cout<<"Exiting..";
                 break;
