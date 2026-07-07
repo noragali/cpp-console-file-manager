@@ -8,6 +8,8 @@ namespace fs = std::filesystem;
 
 void FileManager::listFiles(){
     for (const auto& entry : fs::directory_iterator(currentPath)) {
+        if(entry.is_directory()) cout << "[DIR]";
+        else cout << "[FILE]";
         cout << entry.path().filename() << endl;
     }
 }
