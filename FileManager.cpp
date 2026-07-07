@@ -44,6 +44,26 @@ void FileManager::createFile() {
     file.close();
 }
 
+void FileManager::createFolder() {
+    string name;
+    cout << "Write the name of the folder: ";
+    cin >> name;
+
+    fs::path folderPath = currentPath / name;
+    if(fs::exists(folderPath)) {
+        cout << "A folder like that already exists!";
+        return;
+    }
+
+    bool created = fs::create_directory(folderPath);
+
+    if(created)
+        cout << "Folder created!";
+    else
+        cout << "Could not create the folder!";
+
+}
+
 void FileManager::deleteFile() {
     string name;
     cout << "Write the file name that you want to delete: ";
@@ -95,4 +115,9 @@ void FileManager::changeDirectory() {
     {
         cout << "Folder does not exist!" << endl;
     }
+}
+
+void FileManager::goBack() {
+    currentPath = currentPath.parent_path();
+    cout << "Current dictory changed to: " << currentPath << endl;
 }

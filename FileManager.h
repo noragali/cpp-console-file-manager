@@ -8,7 +8,9 @@ public:
     void currentDirectory();
     void listFiles();
     void createFile();
+    void createFolder();
     void deleteFile();
     void renameFile();
     void changeDirectory();
+    void goBack();
 };
